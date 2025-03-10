@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "../../public/images/logo.png";
 import Link from "next/link";
-import styles from "./siteHeader.module.css";
+import styles from "./SiteHeader.module.css";
 
 const SiteHeader = () => {
   return (
