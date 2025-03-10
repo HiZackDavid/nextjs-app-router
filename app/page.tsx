@@ -1,95 +1,46 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import heroBanner from "../public/images/hero-banner.png";
+import {
+  divinity,
+  synchronicity,
+  theUndertaking,
+  asTheSunSpeaks,
+} from "../public/images/albums";
+import soundwaves from "../public/images/soundwaves.jpg";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <>
+      <div className={styles.heroImage}>
+        <Image src={heroBanner} fill alt="" />
+      </div>
+      <div className={styles.cta}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          style={{ marginLeft: "10px" }}
+          height=" 200"
+          width="200"
+          src={divinity}
+          alt=""
         />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <Image height="200" width="200" src={synchronicity} alt="" />
+        <div className={styles.ctaText}>
+          <div>
+            Your <em>Album</em> and <em>Artist</em> Name
+          </div>
+          <div className={styles.ctaSubText}>
+            <div>
+              on <em>Custom</em> Album Designs
+            </div>
+          </div>
+          <button className="buton cta">Shop Now</button>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <Image height="200" width="200" src={theUndertaking} alt="" />
+        <Image height="200" width="200" src={asTheSunSpeaks} alt="" />
+      </div>
+      <div className={styles.soundwavesImage}>
+        <Image src={soundwaves} alt="" />
+      </div>
+    </>
   );
 }
