@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin: -3px -8px 0 -8px;
+  padding: 0px 8px 5px 8px;
+  border-bottom: 2px solid #818285;
+}
+
+.container > * {
+  margin-left: 25px;
+}
