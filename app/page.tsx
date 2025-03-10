@@ -9,7 +9,11 @@ import {
 } from "../public/images/albums";
 import soundwaves from "../public/images/soundwaves.jpg";
 
-export default function Home() {
+export default async function Home() {
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
+  // throw new Error("Test Error");
+  // return <></>;
+
   return (
     <>
       <div className={styles.heroImage}>
