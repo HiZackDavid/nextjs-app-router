@@ -1,5 +1,6 @@
 import SiteHeader from "@/components/SiteHeader";
 import "./globals.css";
+import ShoppingCartProvider from "@/context/ShoppingCartContext";
 
 export default function RootLayout({
   children,
@@ -9,8 +10,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <SiteHeader />
-        {children}
+        <ShoppingCartProvider>
+          <SiteHeader />
+          {children}
+        </ShoppingCartProvider>
       </body>
     </html>
   );
