@@ -9,3 +9,21 @@
 .container > * {
   margin-left: 25px;
 }
+
+.cart {
+  position: relative;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  right: -15px;
+  background-color: #d25ca1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

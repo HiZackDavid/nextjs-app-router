@@ -3,7 +3,15 @@
 import { IProduct } from "@/app/catalog/ProductDetails";
 import { createContext, useContext, useState } from "react";
 
-const ShoppingCartContext = createContext({});
+export type ShoppingCartContextType = {
+  cart: IProduct[];
+  addToCart: (product: IProduct) => void;
+};
+
+const ShoppingCartContext = createContext<ShoppingCartContextType>({
+  cart: [],
+  addToCart: () => {},
+});
 
 const ShoppingCartProvider = ({ children }: { children: React.ReactNode }) => {
   const [cart, setCart] = useState<IProduct[]>([]);

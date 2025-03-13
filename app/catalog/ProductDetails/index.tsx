@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./ProductDetails.module.css";
 import Link from "next/link";
+import BuyButton from "./BuyButton";
 
 export interface IProduct {
   _id: string;
@@ -27,6 +28,7 @@ const ProductDetails = ({ product }: { product: IProduct }) => {
           }).format(product.price)}
         </div>
       </Link>
+      <BuyButton product={product} />
     </div>
   );
 };
